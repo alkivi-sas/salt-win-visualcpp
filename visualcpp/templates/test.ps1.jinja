@@ -1,0 +1,2 @@
+$test = Get-ItemProperty HKLM:\Software{%- if arch == 'x86' -%}\Wow6432Node{%- endif %}\Microsoft\Windows\CurrentVersion\Uninstall\* | Where-Object {$_.DisplayName -match "C\+\+ {{ test }}"}
+if ($test) { EXIT 0 } else { EXIT 1 }
