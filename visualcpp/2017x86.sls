@@ -12,7 +12,7 @@ vcpp2017x86-packages:
   file.managed:
     - name: c:\alkivi\packages\visualcpp2017\vcredist_x86.exe
     - source: https://aka.ms/vs/15/release/VC_redist.x86.exe
-    - source_hash: sha256=e7d34f0a9d37d7221adc911bd49b316de68a75f3bfa910e2550849ad13d0573f
+    - skip_verify: True
     - makedirs: True
     - unless: powershell -NoProfile -ExecutionPolicy Bypass -Command c:\alkivi\packages\visualcpp2017\test_x86.ps1
     - require: 
